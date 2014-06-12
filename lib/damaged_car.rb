@@ -5,3 +5,12 @@
 #has a cost (how much it would cost to repair)
 
 require_relative 'used_car'
+
+class Damaged
+  attr_accessor :description, :cost
+
+  def initialize (description, cost)
+    @description = description
+    @cost = cost
+  end
+end
