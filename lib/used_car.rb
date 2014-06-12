@@ -9,3 +9,14 @@
 
 #Adding below because a used car should inherit the attributes of a new car
 require_relative 'car'
+
+class Used
+  attr_reader :mileage,
+  attr_accessor :damages, :value
+
+  MILEAGE_DEPRECIATION = 0.0001
+
+  def initialize (mileage)
+    @mileage = mileage
+  end
+end
