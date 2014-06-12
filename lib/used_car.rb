@@ -8,7 +8,7 @@
 #all used cars have a constant mileage depreciation of 1% per 10,000 miles (0.0001% per mile)
 
 #Adding below because a used car should inherit the attributes of a new car
-require_relative 'car'
+require_relative '../lib/car.rb'
 
 class Used
   attr_reader :mileage,
