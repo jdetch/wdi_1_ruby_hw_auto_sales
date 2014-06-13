@@ -11,7 +11,7 @@
 require_relative '../lib/car.rb'
 
 class Used
-  attr_reader :mileage,
+  attr_reader :mileage
   attr_accessor :damages, :value
 
   MILEAGE_DEPRECIATION = 0.0001

@@ -26,4 +26,11 @@ class Car
     now = Date.today
     (now.year - year_of_manufacture) * (original_retail_msrp * DEPRECIATION) + original_retail_msrp
   end
+
+  # Should the markup be a class constant? It might change depending on profits?
+  MARKUP = 0.07
+
+  def price
+    original_retail_msrp * MARKUP + original_retail_msrp
+  end
 end
