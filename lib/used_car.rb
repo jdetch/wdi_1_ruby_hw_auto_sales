@@ -24,4 +24,10 @@ class Used < Car
   def has_damages?
     damages
   end
+
+  def value_depreciated
+    now = Date.today
+    (now.year - year_of_manufacture) * (original_retail_msrp * DEPRECIATION) + original_retail_msrp
+  end
+
 end
