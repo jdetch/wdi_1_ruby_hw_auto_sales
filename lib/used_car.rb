@@ -10,13 +10,18 @@
 #Adding below because a used car should inherit the attributes of a new car
 require_relative '../lib/car.rb'
 
-class Used
-  attr_reader :mileage
-  attr_accessor :damages, :value
+class Used < Car
+  attr_accessor :mileage, :damages, :value
 
   MILEAGE_DEPRECIATION = 0.0001
 
-  def initialize (mileage)
+#Should I be making the damages instance variable a boolean? how?
+  def initialize (mileage, damages)
     @mileage = mileage
+    @damages = damages
+  end
+
+  def has_damages?
+    damages
   end
 end
